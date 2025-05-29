@@ -1,5 +1,7 @@
 package com.codemanship.marsrover;
 
+import java.util.Objects;
+
 public class MarsRover
 {
 	public enum Direction
@@ -12,7 +14,7 @@ public class MarsRover
 	
 	public MarsRover(Direction direction, int x, int y)
 	{
-		this.direction = direction;
+		this.direction = Objects.requireNonNull(direction);
 		this.x = x;
 		this.y = y;
 	}

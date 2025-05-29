@@ -7,6 +7,13 @@ import com.codemanship.marsrover.MarsRover.Direction;
 
 public class TestMarsRover
 {
+	@Test
+	public void testPreventNullDirection()
+	{
+		Assertions.assertThrows(NullPointerException.class, () -> new MarsRover(null, 3, 5));
+	}
+	
+	@Test
 	public void testDropFacingNorthAtLocation()
 	{
 		MarsRover rover = new MarsRover(Direction.NORTH, 2, 2);
