@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
-public class Interpreter<Target>
+public class CommandProcessor<Target>
 {
     private final Target target;
 
@@ -14,7 +14,7 @@ public class Interpreter<Target>
 
     private final InputStream in;
 
-    public Interpreter(
+    public CommandProcessor(
         Target target,
         Map<String, Consumer<Target>> commands,
         InputStream in

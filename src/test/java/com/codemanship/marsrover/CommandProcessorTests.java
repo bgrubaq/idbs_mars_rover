@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 
 import org.junit.jupiter.api.Test;
 
-public class InterpreterTests
+public class CommandProcessorTests
 {
     private interface TestTarget
     {
@@ -29,7 +29,7 @@ public class InterpreterTests
 
         InputStream in = new ByteArrayInputStream("S\n".getBytes());
 
-        new Interpreter<>(module, commands, in).run();
+        new CommandProcessor<>(module, commands, in).run();
 
         verify(module).sampleOperation();
     }
