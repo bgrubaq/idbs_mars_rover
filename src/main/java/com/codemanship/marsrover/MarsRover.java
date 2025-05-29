@@ -28,4 +28,17 @@ public class MarsRover
 	{
 		return new int[] {x, y};
 	}
+
+	public void turnLeft()
+	{
+		switch (direction)
+		{
+			case NORTH:
+				direction = Direction.WEST;
+				break;
+			case SOUTH:
+				direction = Direction.EAST;
+				break;
+		}
+	}
 }
