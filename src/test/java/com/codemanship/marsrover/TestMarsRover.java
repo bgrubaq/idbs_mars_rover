@@ -60,4 +60,20 @@ public class TestMarsRover
 		rover.turnLeft();
 		Assertions.assertEquals(Direction.EAST, rover.getDirection());
 	}
+	
+	@Test
+	public void testTurningLeftFacingEast()
+	{
+		MarsRover rover = new MarsRover(Direction.EAST, 3, 7);
+		rover.turnLeft();
+		Assertions.assertEquals(Direction.NORTH, rover.getDirection());
+	}
+	
+	@Test
+	public void testTurningLeftFacingWest()
+	{
+		MarsRover rover = new MarsRover(Direction.WEST, 3, 7);
+		rover.turnLeft();
+		Assertions.assertEquals(Direction.SOUTH, rover.getDirection());
+	}
 }

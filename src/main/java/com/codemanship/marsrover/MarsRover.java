@@ -39,6 +39,12 @@ public class MarsRover
 			case SOUTH:
 				direction = Direction.EAST;
 				break;
+			case EAST:
+				direction = Direction.NORTH;
+				break;
+			case WEST:
+				direction = Direction.SOUTH;
+				break;
 		}
 	}
 }
