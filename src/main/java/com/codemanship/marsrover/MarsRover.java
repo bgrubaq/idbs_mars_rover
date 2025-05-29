@@ -2,17 +2,22 @@ package com.codemanship.marsrover;
 
 public class MarsRover
 {
-	private String direction;
+	public enum Direction
+	{
+		NORTH, EAST, SOUTH, WEST;
+	}
+	
+	private Direction direction;
 	private int x, y;
 	
-	public MarsRover(String direction, int x, int y)
+	public MarsRover(Direction direction, int x, int y)
 	{
 		this.direction = direction;
 		this.x = x;
 		this.y = y;
 	}
 	
-	public String getDirection()
+	public Direction getDirection()
 	{
 		return direction;
 	}
