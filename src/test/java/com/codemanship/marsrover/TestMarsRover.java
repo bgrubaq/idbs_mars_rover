@@ -44,5 +44,13 @@ public class TestMarsRover
 		Assertions.assertEquals(Direction.EAST, rover.getDirection());
 		Assertions.assertArrayEquals(new int[] {35, 1}, rover.getLocation());
 	}
+	
+	@Test
+	public void testMoveFoward()
+	{
+		MarsRover rover = new MarsRover(Direction.EAST, 35, 1);
+		rover.moveForward();
+		Assertions.assertArrayEquals(new int[] {36, 1}, rover.getLocation());
+	}
 
 }

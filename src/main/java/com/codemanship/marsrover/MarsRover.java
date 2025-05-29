@@ -28,4 +28,23 @@ public class MarsRover
 	{
 		return new int[] {x, y};
 	}
+	
+	public void moveForward()
+	{
+		switch(direction)
+		{
+			case NORTH:
+				y--;
+				break;
+			case EAST:
+				x++;
+				break;
+			case SOUTH:
+				y++;
+				break;
+			case WEST:
+				x--;
+				break;
+		}
+	}
 }
