@@ -25,12 +25,12 @@ public class CommandProcessorTests
 
         commands.put("S", TestTarget::sampleOperation);
 
-        TestTarget module = mock(TestTarget.class);
+        TestTarget target = mock(TestTarget.class);
 
         InputStream in = new ByteArrayInputStream("S\n".getBytes());
 
-        new CommandProcessor<>(module, commands, in).run();
+        new CommandProcessor<>(target, commands, in).run();
 
-        verify(module).sampleOperation();
+        verify(target).sampleOperation();
     }
 }
