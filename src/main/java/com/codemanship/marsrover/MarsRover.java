@@ -65,4 +65,10 @@ public class MarsRover
 				break;
 		}
 	}
+
+	public void outputStatus()
+	{
+		// Stub for demonstrating command wiring; to be implemented soon
+		System.out.println("This doesn't do anything yet.");
+	}
 }
