@@ -18,4 +18,19 @@ public class TestMarsRover
 		MarsRover rover = new MarsRover("South");
 		Assertions.assertEquals("South", rover.getDirection());
 	}
+
+	@Test
+	public void testDropFacingWest()
+	{
+		MarsRover rover = new MarsRover("West");
+		Assertions.assertEquals("West", rover.getDirection());
+	}
+
+	@Test
+	public void testDropFacingEast()
+	{
+		MarsRover rover = new MarsRover("East");
+		Assertions.assertEquals("East", rover.getDirection());
+	}
+
 }
